@@ -1,6 +1,6 @@
-import React, { Component } from "react"; 
+import { Component } from "react"; 
 import { ToastContainer } from 'react-toastify'; 
-import api from "./api.jsx"; 
+import api from "../api.jsx"; 
 import './App.css'; 
 import Searchbar from "./Searchbar/Searchbar.jsx"; 
 import ImageGallery from "./ImageGallery/ImageGallery.jsx"; 
@@ -74,6 +74,8 @@ class App extends Component {
   closeModal = () => {
     this.setState({ showModal: false, largeImageURL: '', tags: '' });
   };
+
+
 
   render() {
     const { images, error, showModal, largeImageURL, tags, status } = this.state;
